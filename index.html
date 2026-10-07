@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] | Personal Portfolio</title>
+  <meta name="description" content="Personal Portfolio of [Your Name] - Showcasing education, skills, projects, certifications, and achievements.">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, Inter, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Accents -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+  </div>
+
+  <!-- ========================================================================
+       TOP HEADER & SLIDE NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo / Monogram -->
+      <a href="#about" class="brand-logo" data-jump-slide="1">
+        <div class="brand-avatar" id="headerInitials">YN</div>
+        <div class="brand-title">
+          <span class="brand-name" id="headerBrandName">[Your Name]</span>
+          <span class="brand-tag">Portfolio &bull; 4 Slides</span>
+        </div>
+      </a>
+
+      <!-- 4 Slides Navigation Bar -->
+      <nav class="slide-nav-menu" id="slideNavMenu" aria-label="Slide Navigation">
+        <button class="slide-nav-btn active" data-slide-target="1" aria-label="Go to Slide 1: About Me">
+          <span class="slide-num">01</span>
+          <span>About Me</span>
+        </button>
+        <button class="slide-nav-btn" data-slide-target="2" aria-label="Go to Slide 2: Education & Skills">
+          <span class="slide-num">02</span>
+          <span>Education & Skills</span>
+        </button>
+        <button class="slide-nav-btn" data-slide-target="3" aria-label="Go to Slide 3: Projects & Awards">
+          <span class="slide-num">03</span>
+          <span>Projects & Awards</span>
+        </button>
+        <button class="slide-nav-btn" data-slide-target="4" aria-label="Go to Slide 4: Contact Me">
+          <span class="slide-num">04</span>
+          <span>Contact Me</span>
+        </button>
+      </nav>
+
+      <!-- Action Controls (Quick Theme & Customizer Trigger) -->
+      <div class="header-actions">
+        <!-- Light / Dark Quick Toggle -->
+        <button class="icon-btn" id="quickThemeToggle" title="Toggle Light / Dark Mode" aria-label="Toggle Light/Dark Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Customizer Drawer Toggle -->
+        <button class="btn-customizer" id="openCustomizerBtn" aria-label="Open Theme & Style Customizer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+          </svg>
+          <span>Customize</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       LATERAL FLOATING DOTS NAVIGATION
+       ======================================================================== -->
+  <aside class="lateral-dots-nav" aria-label="Slide Indicator Dots">
+    <button class="dot-nav-item active" data-slide-target="1" aria-label="Slide 1: About Me">
+      <span class="dot-tooltip">01. About Me</span>
+    </button>
+    <button class="dot-nav-item" data-slide-target="2" aria-label="Slide 2: Education & Skills">
+      <span class="dot-tooltip">02. Education & Skills</span>
+    </button>
+    <button class="dot-nav-item" data-slide-target="3" aria-label="Slide 3: Projects & Awards">
+      <span class="dot-tooltip">03. Projects & Awards</span>
+    </button>
+    <button class="dot-nav-item" data-slide-target="4" aria-label="Slide 4: Contact Me">
+      <span class="dot-tooltip">04. Contact Me</span>
+    </button>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PRESENTATION STAGE (4 SLIDES)
+       ======================================================================== -->
+  <main class="presentation-viewport">
+    <div class="slides-track" id="slidesTrack">
+
+      <!-- ====================================================================
+           SLIDE 1: ABOUT ME
+           ==================================================================== -->
+      <section class="portfolio-slide active" data-slide="1" id="slide-about" aria-labelledby="slide1-heading">
+        <div class="slide-content-wrapper">
+          
+          <div class="slide-header-badge">
+            <span>Slide 01 &bull; Personal Overview</span>
+          </div>
+
+          <div class="about-grid">
+            
+            <!-- Left Profile Card with Photo, Name & Roles -->
+            <div class="glass-card profile-card">
+              <div class="profile-avatar-container">
+                <div class="profile-avatar-frame">
+                  <!-- EDITABLE: Replace src with your image path or click "Change Photo" -->
+                  <img src="" alt="[Your Name] Profile Photo" id="profileImgPreview" class="profile-img-preview" style="display: none;">
+                  <div class="avatar-placeholder-initials" id="avatarInitials">YN</div>
+                </div>
+                <div class="avatar-status-badge">
+                  <span class="status-pulse-dot"></span>
+                  <span>Available</span>
+                </div>
+              </div>
+
+              <!-- Quick button to upload/change photo in browser -->
+              <button class="photo-change-btn" id="triggerPhotoUploadBtn" title="Upload a photo from your computer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+                <span>Upload Photo</span>
+              </button>
+
+              <!-- EDITABLE: Your Full Name -->
+              <h1 class="profile-name" id="slide1-heading">[Your Full Name]</h1>
+              <!-- EDITABLE: Professional Headline / Role -->
+              <p class="profile-role-tag">[Your Professional Title / Domain Specialist]</p>
+
+              <!-- Profile Quick Highlights -->
+              <div class="profile-quick-stats">
+                <div class="stat-box">
+                  <div class="stat-number">04+</div>
+                  <div class="stat-label">[Years Exp / Focus]</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number">15+</div>
+                  <div class="stat-label">[Projects Completed]</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Intro, Bio, Interests & Goals -->
+            <div class="about-narrative">
+              
+              <!-- 2-Sentence Intro Hook -->
+              <div class="glass-card">
+                <h2 class="slide-title" style="margin-bottom: 0.6rem;">
+                  Hello, I'm <span class="gradient-text">[Your Name]</span>
+                </h2>
+                <!-- EDITABLE: 2-Sentence Hook / Tagline -->
+                <p class="about-intro-hero">
+                  [A forward-thinking professional specializing in modern technologies and problem-solving. Passionate about engineering high-quality solutions, building scalable applications, and driving meaningful innovation.]
+                </p>
+              </div>
+
+              <!-- Comprehensive Bio -->
+              <div class="glass-card">
+                <div class="subcard-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                  <span>Biography & Background</span>
+                </div>
+                <!-- EDITABLE: Bio Narrative -->
+                <p class="about-bio-text">
+                  [Provide a comprehensive summary of your background, educational journey, technical curiosity, and work ethic here. Mention the core values that guide your work, the domains that excite you most, and your approach to collaboration and technical craftsmanship.]
+                </p>
+              </div>
+
+              <!-- Interests & Goals 2-Column Split -->
+              <div class="interests-goals-grid">
+                
+                <!-- Interests / Passions -->
+                <div class="glass-card">
+                  <div class="subcard-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <span>Key Interests</span>
+                  </div>
+                  <!-- EDITABLE: Add or remove interest pills -->
+                  <div class="interests-tags-wrap">
+                    <span class="interest-pill">&#9881; [System Architecture]</span>
+                    <span class="interest-pill">&#10024; [Artificial Intelligence]</span>
+                    <span class="interest-pill">&#128187; [Full-Stack Development]</span>
+                    <span class="interest-pill">&#127760; [Open Source]</span>
+                    <span class="interest-pill">&#128640; [Cloud & DevOps]</span>
+                    <span class="interest-pill">&#127912; [UI/UX Design]</span>
+                  </div>
+                </div>
+
+                <!-- Goals Checklist -->
+                <div class="glass-card">
+                  <div class="subcard-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 14 14"></polyline>
+                    </svg>
+                    <span>Current & Future Goals</span>
+                  </div>
+                  <!-- EDITABLE: Add or edit your goals -->
+                  <div class="goals-list">
+                    <div class="goal-item">
+                      <span class="goal-check-icon">&#10003;</span>
+                      <span>[Mastering scalable distributed systems and cloud patterns]</span>
+                    </div>
+                    <div class="goal-item">
+                      <span class="goal-check-icon">&#10003;</span>
+                      <span>[Contributing actively to high-impact open source repositories]</span>
+                    </div>
+                    <div class="goal-item">
+                      <span class="goal-check-icon">&#10003;</span>
+                      <span>[Leading cross-functional engineering teams to launch products]</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Slide 1 Call to Action Buttons -->
+              <div class="about-actions">
+                <button class="btn btn-primary" data-jump-slide="2">
+                  <span>Explore Education & Skills</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <button class="btn btn-secondary" data-jump-slide="3">
+                  <span>View Projects & Awards</span>
+                </button>
+                <button class="btn btn-outline" data-jump-slide="4">
+                  <span>Get in Touch</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================================
+           SLIDE 2: EDUCATION & SKILLS
+           ==================================================================== -->
+      <section class="portfolio-slide" data-slide="2" id="slide-education-skills" aria-labelledby="slide2-heading">
+        <div class="slide-content-wrapper">
+          
+          <div class="slide-header-badge">
+            <span>Slide 02 &bull; Foundations & Capabilities</span>
+          </div>
+
+          <div>
+            <h2 class="slide-title" id="slide2-heading">
+              Education & <span class="gradient-text">Technical Skills</span>
+            </h2>
+            <p class="slide-subtitle">
+              Academic qualifications, programming proficiencies, modern frameworks, and collaboration toolkits.
+            </p>
+          </div>
+
+          <div class="edu-skills-grid">
+            
+            <!-- Left Column: Education Details -->
+            <div class="edu-cards-col">
+              <div class="subcard-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span>Academic Education</span>
+              </div>
+
+              <!-- EDITABLE: Education Card 1 -->
+              <div class="glass-card edu-item-card">
+                <div class="edu-meta-row">
+                  <h3 class="edu-degree-title">[Bachelor of Technology / Science in Your Major]</h3>
+                  <span class="edu-period-badge">[2021 &ndash; 2025]</span>
+                </div>
+                <div class="edu-institution-line">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3"></path><path d="M19 21V11"></path><path d="M5 21V11"></path></svg>
+                  <span>[Your University / College Name, City]</span>
+                </div>
+                <div class="edu-score-pill">
+                  <span>&#9733; [GPA / Grade: e.g. 3.8 / 4.0 or 88%]</span>
+                </div>
+                <p class="edu-details-text">
+                  [Key Coursework: Data Structures & Algorithms, Database Management Systems, Software Engineering, Computer Networks, Operating Systems, Machine Learning Foundations.]
+                </p>
+              </div>
+
+              <!-- EDITABLE: Education Card 2 -->
+              <div class="glass-card edu-item-card">
+                <div class="edu-meta-row">
+                  <h3 class="edu-degree-title">[Higher Secondary School / Pre-University]</h3>
+                  <span class="edu-period-badge">[2019 &ndash; 2021]</span>
+                </div>
+                <div class="edu-institution-line">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3"></path></svg>
+                  <span>[Your High School / College Name, City]</span>
+                </div>
+                <div class="edu-score-pill">
+                  <span>&#9733; [Grade / Percentage: e.g. 92%]</span>
+                </div>
+                <p class="edu-details-text">
+                  [Major subjects: Physics, Chemistry, Mathematics, and Computer Science. Recognized for academic distinction and science competition participation.]
+                </p>
+              </div>
+
+              <!-- Soft Skills Section -->
+              <div class="glass-card">
+                <div class="subcard-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <span>Soft Skills & Professional Attributes</span>
+                </div>
+                <div class="skill-chips-wrap">
+                  <span class="skill-chip highlight">&#9733; [Problem Solving & Analysis]</span>
+                  <span class="skill-chip highlight">&#9733; [Cross-Functional Teamwork]</span>
+                  <span class="skill-chip">&#9733; [Technical Communication]</span>
+                  <span class="skill-chip">&#9733; [Adaptability & Quick Learning]</span>
+                  <span class="skill-chip">&#9733; [Agile & Scrum Practices]</span>
+                  <span class="skill-chip">&#9733; [Time & Project Management]</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Programming Languages, Tech Stack & Tools -->
+            <div class="skills-col">
+              
+              <!-- Programming Languages with Visual Progress Bars -->
+              <div class="glass-card">
+                <div class="subcard-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>Programming Languages</span>
+                </div>
+
+                <div class="languages-grid">
+                  <!-- EDITABLE: Language 1 -->
+                  <div class="lang-item">
+                    <div class="lang-header">
+                      <span class="lang-name">[Python]</span>
+                      <span class="lang-percent">[88%]</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill" style="width: 88%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- EDITABLE: Language 2 -->
+                  <div class="lang-item">
+                    <div class="lang-header">
+                      <span class="lang-name">[JavaScript / TypeScript]</span>
+                      <span class="lang-percent">[92%]</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill" style="width: 92%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- EDITABLE: Language 3 -->
+                  <div class="lang-item">
+                    <div class="lang-header">
+                      <span class="lang-name">[Java / C++]</span>
+                      <span class="lang-percent">[80%]</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- EDITABLE: Language 4 -->
+                  <div class="lang-item">
+                    <div class="lang-header">
+                      <span class="lang-name">[SQL & Databases]</span>
+                      <span class="lang-percent">[85%]</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- EDITABLE: Language 5 -->
+                  <div class="lang-item">
+                    <div class="lang-header">
+                      <span class="lang-name">[HTML5 & CSS3 / SASS]</span>
+                      <span class="lang-percent">[95%]</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                  </div>
+
+                  <!-- EDITABLE: Language 6 -->
+                  <div class="lang-item">
+                    <div class="lang-header">
+                      <span class="lang-name">[Bash / Shell Scripting]</span>
+                      <span class="lang-percent">[75%]</span>
+                    </div>
+                    <div class="progress-track">
+                      <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Skills & Frameworks -->
+              <div class="glass-card">
+                <div class="subcard-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                  <span>Technical Skills & Frameworks</span>
+                </div>
+                <div class="skill-chips-wrap">
+                  <span class="skill-chip">[React.js / Next.js]</span>
+                  <span class="skill-chip">[Node.js / Express]</span>
+                  <span class="skill-chip">[RESTful APIs & GraphQL]</span>
+                  <span class="skill-chip">[PostgreSQL / MongoDB]</span>
+                  <span class="skill-chip">[Tailwind CSS]</span>
+                  <span class="skill-chip">[Docker Containers]</span>
+                  <span class="skill-chip">[AWS / Cloud Services]</span>
+                  <span class="skill-chip">[CI/CD Pipelines]</span>
+                  <span class="skill-chip">[Test-Driven Development]</span>
+                </div>
+              </div>
+
+              <!-- Tools & Development Environment -->
+              <div class="glass-card">
+                <div class="subcard-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                  <span>Tools & Platforms</span>
+                </div>
+                <div class="tools-grid">
+                  <div class="tool-badge">
+                    <span>&#128187; [VS Code]</span>
+                  </div>
+                  <div class="tool-badge">
+                    <span>&#128279; [Git & GitHub]</span>
+                  </div>
+                  <div class="tool-badge">
+                    <span>&#128051; [Docker]</span>
+                  </div>
+                  <div class="tool-badge">
+                    <span>&#128236; [Postman]</span>
+                  </div>
+                  <div class="tool-badge">
+                    <span>&#127912; [Figma]</span>
+                  </div>
+                  <div class="tool-badge">
+                    <span>&#128039; [Linux / Unix]</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================================
+           SLIDE 3: PROJECTS, CERTIFICATIONS & ACHIEVEMENTS
+           ==================================================================== -->
+      <section class="portfolio-slide" data-slide="3" id="slide-projects-achievements" aria-labelledby="slide3-heading">
+        <div class="slide-content-wrapper">
+          
+          <div class="slide-header-badge">
+            <span>Slide 03 &bull; Portfolio Showcase</span>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h2 class="slide-title" id="slide3-heading">
+                Projects, Certifications & <span class="gradient-text">Achievements</span>
+              </h2>
+              <p class="slide-subtitle">
+                Demonstrated impact through real-world applications, accredited credentials, and competitive recognitions.
+              </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="category-tab-bar" role="tablist">
+              <button class="cat-tab-btn active" data-filter="all">All (Show All)</button>
+              <button class="cat-tab-btn" data-filter="projects">Projects</button>
+              <button class="cat-tab-btn" data-filter="certifications">Certifications</button>
+              <button class="cat-tab-btn" data-filter="achievements">Achievements</button>
+            </div>
+          </div>
+
+          <!-- 3-Column Showcase Grid -->
+          <div class="showcase-grid-three-col">
+            
+            <!-- ==================== COLUMN 1: PROJECTS ==================== -->
+            <div class="showcase-section-col" data-category="projects">
+              <div class="showcase-col-header">
+                <div class="showcase-col-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                  <span>Featured Projects</span>
+                </div>
+                <span class="item-counter-badge">02 Items</span>
+              </div>
+
+              <!-- EDITABLE: Project Item 1 -->
+              <div class="glass-card item-card">
+                <div>
+                  <div class="item-top-meta">
+                    <span class="item-org-subtitle">[Web / Full-Stack App]</span>
+                    <span class="item-date-badge">[Jan 2024 &ndash; Mar 2024]</span>
+                  </div>
+                  <h3 class="item-title">[Project Title One: Intelligent Task Hub]</h3>
+                  <p class="item-description">
+                    [A modern responsive productivity dashboard providing real-time task management, team collaboration features, and automated notifications with low-latency syncing.]
+                  </p>
+                  <div class="item-tags-wrap">
+                    <span class="item-tag">[React.js]</span>
+                    <span class="item-tag">[Node.js]</span>
+                    <span class="item-tag">[MongoDB]</span>
+                    <span class="item-tag">[Tailwind]</span>
+                  </div>
+                </div>
+                <!-- EDITABLE: Clickable Project Links -->
+                <div class="item-actions-row">
+                  <a href="https://example.com/live-demo-1" target="_blank" rel="noopener noreferrer" class="action-link" title="Open live project demo">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/yourusername/project-repo-1" target="_blank" rel="noopener noreferrer" class="action-link action-link-alt" title="View source code on GitHub">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- EDITABLE: Project Item 2 -->
+              <div class="glass-card item-card">
+                <div>
+                  <div class="item-top-meta">
+                    <span class="item-org-subtitle">[Data & Cloud Service]</span>
+                    <span class="item-date-badge">[Jun 2024 &ndash; Aug 2024]</span>
+                  </div>
+                  <h3 class="item-title">[Project Title Two: API Analytics Engine]</h3>
+                  <p class="item-description">
+                    [High-throughput telemetry microservice built to process, aggregate, and visualize API metrics with custom alerting algorithms and exportable reporting tools.]
+                  </p>
+                  <div class="item-tags-wrap">
+                    <span class="item-tag">[Python]</span>
+                    <span class="item-tag">[FastAPI]</span>
+                    <span class="item-tag">[PostgreSQL]</span>
+                    <span class="item-tag">[Docker]</span>
+                  </div>
+                </div>
+                <!-- EDITABLE: Clickable Project Links -->
+                <div class="item-actions-row">
+                  <a href="https://example.com/live-demo-2" target="_blank" rel="noopener noreferrer" class="action-link" title="Open live project demo">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>Live Demo</span>
+                  </a>
+                  <a href="https://github.com/yourusername/project-repo-2" target="_blank" rel="noopener noreferrer" class="action-link action-link-alt" title="View source code on GitHub">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Source Code</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ==================== COLUMN 2: CERTIFICATIONS ==================== -->
+            <div class="showcase-section-col" data-category="certifications">
+              <div class="showcase-col-header">
+                <div class="showcase-col-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                  <span>Certifications</span>
+                </div>
+                <span class="item-counter-badge">02 Items</span>
+              </div>
+
+              <!-- EDITABLE: Certification Item 1 -->
+              <div class="glass-card item-card">
+                <div>
+                  <div class="item-top-meta">
+                    <span class="item-org-subtitle">[Amazon Web Services / Cloud]</span>
+                    <span class="item-date-badge">[Issued: May 2024]</span>
+                  </div>
+                  <h3 class="item-title">[AWS Certified Cloud Practitioner / Solutions]</h3>
+                  <p class="item-description">
+                    [Validation of comprehensive knowledge in cloud architecture, security compliance, serverless infrastructure, and high availability design principles.]
+                  </p>
+                  <div class="item-tags-wrap">
+                    <span class="item-tag">[ID: AWS-VERIFY-12345]</span>
+                    <span class="item-tag">[Cloud Architecture]</span>
+                  </div>
+                </div>
+                <!-- EDITABLE: Clickable Verification Link -->
+                <div class="item-actions-row">
+                  <a href="https://example.com/verify-certificate-1" target="_blank" rel="noopener noreferrer" class="action-link" title="Verify certificate credentials online">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>Verify Credential</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- EDITABLE: Certification Item 2 -->
+              <div class="glass-card item-card">
+                <div>
+                  <div class="item-top-meta">
+                    <span class="item-org-subtitle">[Meta / Coursera Professional]</span>
+                    <span class="item-date-badge">[Issued: Dec 2023]</span>
+                  </div>
+                  <h3 class="item-title">[Professional Full-Stack Developer Certificate]</h3>
+                  <p class="item-description">
+                    [Rigorous multi-course specialization covering modern frontend engineering, component architectures, REST API testing, and accessible web standards.]
+                  </p>
+                  <div class="item-tags-wrap">
+                    <span class="item-tag">[ID: META-CS-78901]</span>
+                    <span class="item-tag">[Frontend & Backend]</span>
+                  </div>
+                </div>
+                <!-- EDITABLE: Clickable Verification Link -->
+                <div class="item-actions-row">
+                  <a href="https://example.com/verify-certificate-2" target="_blank" rel="noopener noreferrer" class="action-link" title="Verify certificate credentials online">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span>Verify Credential</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ==================== COLUMN 3: ACHIEVEMENTS ==================== -->
+            <div class="showcase-section-col" data-category="achievements">
+              <div class="showcase-col-header">
+                <div class="showcase-col-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <span>Achievements & Honors</span>
+                </div>
+                <span class="item-counter-badge">02 Items</span>
+              </div>
+
+              <!-- EDITABLE: Achievement Item 1 -->
+              <div class="glass-card item-card">
+                <div>
+                  <div class="item-top-meta">
+                    <span class="item-org-subtitle">[National / Regional Hackathon]</span>
+                    <span class="item-date-badge">[March 2024]</span>
+                  </div>
+                  <h3 class="item-title">[1st Place Winner &mdash; Innovation Hackathon]</h3>
+                  <p class="item-description">
+                    [Awarded first place among 60+ competitor teams for designing and prototyping an assistive AI-driven web accessibility tool within a 36-hour sprint.]
+                  </p>
+                  <div class="item-tags-wrap">
+                    <span class="item-tag">[Winner Award]</span>
+                    <span class="item-tag">[Team Lead]</span>
+                  </div>
+                </div>
+                <!-- EDITABLE: Clickable Achievement Link -->
+                <div class="item-actions-row">
+                  <a href="https://example.com/award-details-1" target="_blank" rel="noopener noreferrer" class="action-link" title="Read press release or award announcement">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>View Award Details</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- EDITABLE: Achievement Item 2 -->
+              <div class="glass-card item-card">
+                <div>
+                  <div class="item-top-meta">
+                    <span class="item-org-subtitle">[Academic University Council]</span>
+                    <span class="item-date-badge">[2023 &ndash; 2024]</span>
+                  </div>
+                  <h3 class="item-title">[Dean's Academic Excellence Honor Roll]</h3>
+                  <p class="item-description">
+                    [Conferred for ranking within the top 5 percentile of the academic cohort across technical coursework, practical labs, and engineering projects.]
+                  </p>
+                  <div class="item-tags-wrap">
+                    <span class="item-tag">[Academic Honor]</span>
+                    <span class="item-tag">[Top 5%]</span>
+                  </div>
+                </div>
+                <!-- EDITABLE: Clickable Achievement Link -->
+                <div class="item-actions-row">
+                  <a href="https://example.com/academic-honor-link" target="_blank" rel="noopener noreferrer" class="action-link" title="View citation or university certificate">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>View Citation</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================================
+           SLIDE 4: CONTACT ME
+           ==================================================================== -->
+      <section class="portfolio-slide" data-slide="4" id="slide-contact" aria-labelledby="slide4-heading">
+        <div class="slide-content-wrapper">
+          
+          <div class="slide-header-badge">
+            <span>Slide 04 &bull; Let's Connect</span>
+          </div>
+
+          <div>
+            <h2 class="slide-title" id="slide4-heading">
+              Get In <span class="gradient-text">Touch</span>
+            </h2>
+            <p class="slide-subtitle">
+              Have an opportunity, collaboration, or question? Feel free to reach out directly through any channel below.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            
+            <!-- Left Column: Direct Channels & Social Profiles -->
+            <div class="contact-channels-col">
+              
+              <!-- Direct Contact Channels (Email & Phone with Quick Copy) -->
+              <div class="direct-contact-cards">
+                
+                <!-- EDITABLE: Email Channel -->
+                <div class="glass-card contact-quick-card">
+                  <div class="contact-icon-bubble">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <span class="contact-label">Email Address</span>
+                  <!-- Clickable mailto: link -->
+                  <a href="mailto:your.email@example.com" class="contact-value-link" id="contactEmailLink">
+                    <span>your.email@example.com</span>
+                  </a>
+                  <!-- Quick Copy Button -->
+                  <button class="copy-btn-inline" data-copy-target="your.email@example.com" aria-label="Copy Email to Clipboard">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Copy Email</span>
+                  </button>
+                </div>
+
+                <!-- EDITABLE: Phone Channel -->
+                <div class="glass-card contact-quick-card">
+                  <div class="contact-icon-bubble">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <span class="contact-label">Phone / WhatsApp</span>
+                  <!-- Clickable tel: link -->
+                  <a href="tel:+15551234567" class="contact-value-link" id="contactPhoneLink">
+                    <span>+1 (555) 123-4567</span>
+                  </a>
+                  <!-- Quick Copy Button -->
+                  <button class="copy-btn-inline" data-copy-target="+1 (555) 123-4567" aria-label="Copy Phone Number to Clipboard">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Copy Phone</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Social Links Directory (Clickable & Easily Replaceable) -->
+              <div class="glass-card socials-grid-wrapper">
+                <div class="subcard-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                  <span>Professional & Social Profiles</span>
+                </div>
+
+                <div class="social-cards-grid">
+                  
+                  <!-- EDITABLE: LinkedIn Link -->
+                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-card-item" title="Connect on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                  </a>
+
+                  <!-- EDITABLE: GitHub Link -->
+                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-card-item" title="Explore GitHub code repositories">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+
+                  <!-- EDITABLE: Instagram Link -->
+                  <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-card-item" title="Follow on Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span>Instagram</span>
+                  </a>
+
+                  <!-- EDITABLE: Twitter / X Link -->
+                  <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-card-item" title="Follow on X (Twitter)">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    <span>Twitter / X</span>
+                  </a>
+
+                  <!-- EDITABLE: YouTube Link -->
+                  <a href="https://youtube.com/@yourusername" target="_blank" rel="noopener noreferrer" class="social-card-item" title="Visit YouTube Channel">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <span>YouTube</span>
+                  </a>
+
+                  <!-- EDITABLE: Discord / Community Link -->
+                  <a href="https://discord.com/users/yourusername" target="_blank" rel="noopener noreferrer" class="social-card-item" title="Join Discord server or message">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    <span>Discord</span>
+                  </a>
+
+                </div>
+              </div>
+
+              <!-- Location & Response Time Notice -->
+              <div class="glass-card" style="padding: 1rem 1.25rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.88rem; color: var(--text-secondary);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Location: <strong>[City, Country]</strong></span>
+                  </div>
+                  <div style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">
+                    <span>&bull; Typical Response: Within 24 Hours</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Interactive Send Message Form -->
+            <div class="glass-card contact-form-container">
+              <div>
+                <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Send a Direct Message</h3>
+                <p style="font-size: 0.86rem; color: var(--text-secondary);">Fill out the form below to initiate an email conversation directly.</p>
+              </div>
+
+              <!-- Submission alert notification -->
+              <div id="formStatusAlert" class="form-status-alert"></div>
+
+              <form id="portfolioContactForm" autocomplete="on">
+                <div class="form-group">
+                  <label for="contactSenderName" class="form-label">Your Name</label>
+                  <input type="text" id="contactSenderName" class="form-input" placeholder="e.g. Alex Morgan" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSenderEmail" class="form-label">Your Email Address</label>
+                  <input type="email" id="contactSenderEmail" class="form-input" placeholder="e.g. alex@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">Subject</label>
+                  <input type="text" id="contactSubject" class="form-input" placeholder="e.g. Collaboration on Engineering Project" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">Message Details</label>
+                  <textarea id="contactMessage" class="form-textarea" placeholder="Write your message, project scope, or inquiry here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+
+  <!-- ========================================================================
+       PRESENTATION FOOTER CONTROLS
+       ======================================================================== -->
+  <footer class="presentation-footer">
+    <div class="footer-container">
+      
+      <!-- Slide Progress Bar & Counter -->
+      <div class="slide-progress-wrap">
+        <span class="slide-counter-badge" id="slideCounterBadge">01 / 04</span>
+        <div class="slide-progress-bar-bg" aria-hidden="true">
+          <div class="slide-progress-bar-fill" id="slideProgressFill"></div>
+        </div>
+      </div>
+
+      <!-- Keyboard shortcuts hint -->
+      <div class="keyboard-hint-pill">
+        <span>Navigate:</span>
+        <kbd>&larr;</kbd>
+        <kbd>&rarr;</kbd>
+        <span>or</span>
+        <kbd>1</kbd>-<kbd>4</kbd>
+      </div>
+
+      <!-- Prev / Next Arrow Navigation Buttons -->
+      <div class="slide-arrows-wrap">
+        <button class="slide-nav-arrow-btn" id="prevSlideBtn" disabled aria-label="Go to Previous Slide">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>Previous</span>
+        </button>
+
+        <button class="slide-nav-arrow-btn" id="nextSlideBtn" aria-label="Go to Next Slide">
+          <span>Next</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       CUSTOMIZER DRAWER & MODAL
+       ======================================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside class="customizer-drawer" id="customizerDrawer" aria-label="Appearance & Content Customizer">
+    <div class="drawer-header">
+      <div class="drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+        </svg>
+        <span>Theme & Customizer</span>
+      </div>
+      <button class="drawer-close-btn" id="closeCustomizerBtn" aria-label="Close Customizer Drawer">&times;</button>
+    </div>
+
+    <!-- Section 1: Color Presets -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">Color Palettes</div>
+      <div class="theme-presets-grid">
+        <button class="theme-preset-btn" data-theme-preset="indigo">
+          <span class="theme-swatch" style="background: #6366f1;"></span>
+          <span>Indigo Modern</span>
+        </button>
+        <button class="theme-preset-btn" data-theme-preset="emerald">
+          <span class="theme-swatch" style="background: #10b981;"></span>
+          <span>Cyber Emerald</span>
+        </button>
+        <button class="theme-preset-btn" data-theme-preset="ocean">
+          <span class="theme-swatch" style="background: #0ea5e9;"></span>
+          <span>Oceanic Teal</span>
+        </button>
+        <button class="theme-preset-btn" data-theme-preset="sunset">
+          <span class="theme-swatch" style="background: #f43f5e;"></span>
+          <span>Sunset Rose</span>
+        </button>
+        <button class="theme-preset-btn" data-theme-preset="light" style="grid-column: span 2;">
+          <span class="theme-swatch" style="background: #ffffff; border: 1px solid #ccc;"></span>
+          <span>Minimalist Light Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 2: Custom Color Pickers -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">Custom Accents</div>
+      <div class="color-picker-row">
+        <span>Primary Color</span>
+        <input type="color" id="primaryColorInput" class="color-input-bubble" value="#6366f1" title="Pick Primary Brand Color">
+      </div>
+      <div class="color-picker-row">
+        <span>Secondary Accent</span>
+        <input type="color" id="accentColorInput" class="color-input-bubble" value="#10b981" title="Pick Secondary Accent Color">
+      </div>
+      <div class="color-picker-row">
+        <span>Background Canvas</span>
+        <input type="color" id="bgColorInput" class="color-input-bubble" value="#0b0f19" title="Pick Background Darkness">
+      </div>
+    </div>
+
+    <!-- Section 3: Typography -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">Font Family</div>
+      <select id="fontFamilySelect" class="font-select-input" aria-label="Select typography font">
+        <option value="Plus Jakarta Sans">Plus Jakarta Sans (Default Modern)</option>
+        <option value="Outfit">Outfit (Geometric & Friendly)</option>
+        <option value="Inter">Inter (Ultra Clean & Corporate)</option>
+        <option value="Space Grotesk">Space Grotesk (Tech & Brutalist)</option>
+      </select>
+    </div>
+
+    <!-- Section 4: Live In-Browser Text Editing -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">In-Browser Editing</div>
+      <div class="live-edit-toggle-card">
+        <div>
+          <div style="font-size: 0.9rem; font-weight: 700;">Live Edit Mode</div>
+          <p class="live-edit-desc">Click & type directly on any slide text.</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="liveEditToggle" aria-label="Toggle Live Edit Mode">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Section 5: Profile Photo Uploader -->
+    <div class="drawer-section">
+      <div class="drawer-section-title">Profile Photo Avatar</div>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+        <label for="photoFileInput" style="font-size: 0.8rem; color: var(--text-secondary);">Upload from computer:</label>
+        <input type="file" id="photoFileInput" accept="image/*" style="font-size: 0.82rem; color: var(--text-secondary);">
+        
+        <label for="photoUrlInput" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.35rem;">Or paste image URL:</label>
+        <input type="url" id="photoUrlInput" class="form-input" style="padding: 0.45rem 0.75rem;" placeholder="https://example.com/photo.jpg">
+      </div>
+    </div>
+
+    <!-- Reset Defaults Button -->
+    <div style="margin-top: auto; padding-top: 1rem;">
+      <button class="btn btn-secondary" id="resetThemeBtn" style="width: 100%;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="1 4 1 10 7 10"></polyline>
+          <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+        </svg>
+        <span>Reset Defaults</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Toast Notification Message Container -->
+  <div id="portfolioToast" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <!-- Core JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
